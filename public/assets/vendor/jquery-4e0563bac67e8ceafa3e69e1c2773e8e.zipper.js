@@ -1,0 +1,1 @@
+(function(a){a.zip=function(a,b){var c=a.length>b.length?b:a,d={};for(var e=0;e<c.length;e++)d[a[e]]=b[e];return d}})(jQuery)
