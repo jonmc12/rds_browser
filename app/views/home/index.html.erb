@@ -1,0 +1,141 @@
+<!-- Home Page / Front Page -->
+<% content_for :head do%>
+
+<%#= javascript_include_tag 'live' if Rails.env == 'development'%>
+
+<% end %>
+
+<!-- Guiders Shelf -->
+<div class="topLeftSlideOut">
+  <a class="guiderHandle" href="#">Guiders</a>
+  <ul><span>Guiders</span>
+     <li><a href="javascript:guider.show('header_first')">Header</a></li>
+     <span>Search Restaurants:</span>
+     <li><a href="javascript:guider.show('addressForm_first')">by Address</a></li>
+     <li><a href="javascript:guider.show('header_first')">by Franchise[todo]</a></li>
+     <span>Fill Cart:</span>
+     <li><a href="javascript:guider.show('header_first')">by Order History[todo]</a></li>
+     <li><a href="javascript:guider.show('header_first')">by Menu Preview[todo]</a></li>
+     <li><a href="javascript:guider.show('header_first')">by Restaurant Menu[todo]</a></li>
+     <span>Checkout and Confirm:</span>
+     <li><a href="javascript:guider.show('header_first')">by Credit Card[todo]</a></li>
+     <li><a href="javascript:guider.show('header_first')">by Cash[todo]</a></li>
+     
+  </ul>
+</div>
+
+<!-- Test Shelf -->
+<div class="bottomLeftSlideOut">
+  <a class="viewStatesHandle" href="#">View States:</a>
+
+  <ul><span>Header Base</span>
+    <li><a href="javascript:app.customerOrder.loginWithCredentials()">Login (todo)</a></li>
+    <li><a href="javascript:app.customerOrder.createAccount()">Create Account (todo)</a></li>
+  </ul>
+  
+  <ul><span>Welcome</span>
+    <li>Search Restaurants
+      <div><a href="#restaurants/address/form">[by Address]</a></div>
+      <div><a href="#restaurants/franchise/form">[by Franchise]</a></div>
+    </li>
+  </ul>
+
+  <ul><span>Restaurants by Address</span>
+    <li>Select Restaurant
+      <div><a href="#restaurants/address/select/list">[List]</a></div>
+      <div><a href="#restaurants/address/select/gallery">[Gallery]</a></div>
+    </li>
+    <li>Select with Info
+      <div><a href="#restaurants/address/select+Info/list">[List]</a></div>
+      <div><a href="#restaurants/address/select+Info/gallery">[Gallery]</a></div>
+    </li>
+    <li>Select with Preview
+      <div><a href="#restaurants/address/select+PreviewMenu/list">[List]</a></div>
+      <div><a href="#restaurants/address/select+PreviewMenu/gallery">[Gallery]</a></div>
+    </li>
+    <li>Select with Cart
+      <div><a href="#restaurants/address/select+Cart/list">[List]</a></div>
+      <div><a href="#restaurants/address/select+Cart/gallery">[Gallery]</a></div>
+    </li>
+    <li>Select with Info, Cart
+      <div><a href="#restaurants/address/select+Info+Cart/list">[List]</a></div>
+      <div><a href="#restaurants/address/select+Info+Cart/gallery">[Gallery]</a></div>
+    </li>
+    <li>Select with Preview, Cart
+      <div><a href="#restaurants/address/select+PreviewMenu+Cart/list">[List]</a></div>
+      <div><a href="#restaurants/address/select+PreviewMenu+Cart/gallery">[Gallery]</a></div>
+    </li>
+  </ul>
+
+  <ul><span>Restaurants by Franchise</span>
+    <li>Select Restaurant
+      <div><a href="#restaurants/franchise/select/list">[List]</a></div>
+      <div><a href="#restaurants/franchise/select/gallery">[Gallery]</a></div>
+    </li>
+    <li>Select with Info
+      <div><a href="#restaurants/franchise/select+Info/list">[List]</a></div>
+      <div><a href="#restaurants/franchise/select+Info/gallery">[Gallery]</a></div>
+    </li>
+    <li>Select with Preview
+      <div><a href="#restaurants/franchise/select+PreviewMenu/list">[List]</a></div>
+      <div><a href="#restaurants/franchise/select+PreviewMenu/gallery">[Gallery]</a></div>
+    </li>
+    <li>Select with Cart
+      <div><a href="#restaurants/franchise/select+Cart/list">[List]</a></div>
+      <div><a href="#restaurants/franchise/select+Cart/gallery">[Gallery]</a></div>
+    </li>
+    <li>Select with Info, Cart
+      <div><a href="#restaurants/franchise/select+Info+Cart/list">[List]</a></div>
+      <div><a href="#restaurants/franchise/select+Info+Cart/gallery">[Gallery]</a></div>
+    </li>
+    <li>Select with Preview, Cart
+      <div><a href="#restaurants/franchise/select+PreviewMenu+Cart/list">[List]</a></div>
+      <div><a href="#restaurants/franchise/select+PreviewMenu+Cart/gallery">[Gallery]</a></div>
+    </li>
+  </ul>
+  
+  <ul><span>Menu Items</span>
+    <li>Select Menu Item
+      <div><a href="#menuitems/select+PreviewMenu+Cart/list">[List]</a></div>
+      <div><a href="#menuitems/select+PreviewMenu+Cart/gallery">[Gallery]</a></div>
+      
+      <div><a href="javascript:app.customerOrder.set({state:'anonymous.menuitems.selectMenuItemByRestaurant'})">[by Restaurant]</a></div>
+      <div><a href="javascript:app.customerOrder.set({state:'anonymous.menuitems.selectMenuItemByRestaurantWithFullCart'})">[with Full Cart]</a></div>
+      <div><a href="javascript:app.customerOrder.set({state:'anonymous.menuitems.selectMenuItemOptions'})">[Options]</a></div>
+    </li>
+    <li>View Restaurant Info
+      <div><a href="javascript:app.customerOrder.set({state:'anonymous.menuitems.viewRestaurantInfo'})">[Text]</a></div>
+    </li>
+  </ul>
+
+  <ul><span>Checkout</span>
+    <li><a href="javascript:app.customerOrder.inputDeliveryAndPaymentInformation()">Input Delivery and Payment Information</a></li>
+  </ul>
+
+  <ul><span>Confirm</span>
+    <li><a href="javascript:app.customerOrder.selectOrderPurchaseConfirmation()">Select Order Purchase Confirmation</a></li>
+  </ul>
+   
+</div>
+
+
+
+<!-- Input - Addressed, based on Building Type from Customer -->
+<!-- Output - Restaurant Page Loaded -->
+<%=render :partial => 'address_form'%>
+<%=render :partial => 'franchise_form'%>
+<%=render :partial => 'restaurant_search_header'%>
+<%=render :partial => 'menu_header'%>
+
+<!-- Featured Restuarants or Menu Items -->
+<%=render :partial => 'featured_product'%>
+<%=render :partial => 'restaurant_select'%>
+<%=render :partial => 'menu_select'%>
+<%=render :partial => 'restaurant_info'%>
+
+
+<!-- Mr Delivery Story -->
+<%=render :partial => 'company_story'%>
+
+<!-- New Restaurants or Menu Items -->
+<%=render :partial => 'new_product'%>

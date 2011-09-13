@@ -1,0 +1,145 @@
+<script type="text/javascript">
+
+</script>
+
+
+<section id="addressForm">
+  <div class="help container" style="display:none;"><%=raw @spec[:object_address_form_spec]%></div>
+  
+  <!-- Address Input -->
+  <!-- Zip Input -->
+  <!-- Building Input -->
+  
+  <ul class="buildingIcons container">
+    <li class="houseIcon container" form="house"><a class="house image" href="#">&nbsp</a></li>
+    <li class="apartmentIcon container" form="apartment"><a class="apartment image" href="#">&nbsp</a></li>
+    <li class="businessIcon container" form="business"><a class="business image" href="#">&nbsp</a></li>
+    <li class="campusIcon container" form="campus"><a class="campus image" href="#">&nbsp</a></li>
+    <li class="hotelIcon container" form="hotel"><a class="hotel image" href="#">&nbsp</a></li>
+    <li class="otherIcon container" form="other"><a class="other image" href="#">&nbsp</a></li>
+    <div class="clear"> </div>
+  </ul>
+  <ul class="addressForms container">
+    <li class="houseForm container">
+      <form>
+        <!-- <div class="addressInput container"><img src="/images/mockup/form_address_input.png" alt="" /></div>
+        <div class="zipInput container"><img src="/images/mockup/form_zip_input.png" alt="" /></div> -->
+        <div>
+          <label for="streetAddress">Street Address:</label>
+          <input type="text" class="streetAddress text" value="address" />
+        </div>
+        <div>
+          <label for="zip">Zip Code:</label>
+          <input type="text" class="zip text" value="zip" />
+        </div>
+        <input type="submit" name="houseSubmit" value="Submit" />
+      </form>
+    <li class="apartmentForm container">
+      <form style="display:none;">
+        <div>
+          <label for="apartmentName">Apartment Name:</label>
+          <input type="text" class="apartmentName text" name="apartmentName" value="apartment name" />
+        </div>
+        <div>
+          <label for="apartmentNumber">Apartment Number:</label>
+          <input type="text" class="apartmentNumber text" name="apartmentNumber" value="apartment number" />
+        </div>
+        <div>
+          <label for="streetAddress">Street Address:</label>
+          <input type="text" class="streetAddress text" name="streetAddress" value="address" />
+        </div>
+        <div>
+          <label for="zip">Zip Code:</label>
+          <input type="text" class="zip text" name="zip" value="zip" />
+        </div>
+        <input type="submit" name="houseSubmit" value="Submit" />
+      </form>
+    </li>
+    <li class="businessForm container">
+      <form style="display:none;">
+        <div>
+          <label for="businessName">Business Name:</label>
+          <input type="text" class="businessName text" name="businessName" value="business name" />
+        </div>
+        <div>
+          <label for="businessNumber">Suite Number:</label>
+          <input type="text" class="businessNumber text" name="businessNumber" value="business number" />
+        </div>
+        <div>
+          <label for="streetAddress">Street Address:</label>
+          <input type="text" class="streetAddress text" name="streetAddress" value="address" />
+        </div>
+        <div>
+          <label for="zip">Zip Code:</label>
+          <input type="text" class="zip text" name="zip" value="zip" />
+        </div>
+        <input type="submit" name="houseSubmit" value="Submit" />
+      </form>
+    </li>
+    <li class="campusForm container">
+      <form style="display:none;">
+        <div>
+          <label for="campusName">Campus Name:</label>
+          <input type="text" class="campusName text" name="campusName" value="campus name" />
+        </div>
+        <div>
+          <label for="building">Building:</label>
+          <input type="text" class="building text" name="building" value="building" />
+        </div>
+        <div>
+          <label for="buildingNumber">Room Number:</label>
+          <input type="text" class="buildingNumber text" name="buildingNumber" value="building number" />
+        </div>
+        <div>
+          <label for="streetAddress">Street Address:</label>
+          <input type="text" class="streetAddress text" name="streetAddress" value="address" />
+        </div>
+        <div>
+          <label for="city">City:</label>
+          <input type="text" class="city text" name="city" value="city" />
+        </div>
+        <input type="submit" name="houseSubmit" value="Submit" />
+      </form>
+    </li>
+    <li class="hotelForm container">
+      <form style="display:none;">
+        <div>
+          <label for="hotelName">Hotel Name:</label>
+          <input type="text" class="hotelName text" name="hotelName" value="hotel name" />
+        </div>
+        <div>
+          <label for="hotelNumber">Room Number:</label>
+          <input type="text" class="hotelNumber text" name="hotelNumber" value="hotel number" />
+        </div>
+        <div>
+          <label for="streetAddress">Street Address:</label>
+          <input type="text" class="streetAddress text" name="streetAddress" value="address" />
+        </div>
+        <div>
+          <label for="city">City:</label>
+          <input type="text" class="city text" name="city" value="city" />
+        </div>
+        <input type="submit" name="houseSubmit" value="Submit" />
+      </form>
+    </li>
+    <li class="otherForm container">
+      <form style="display:none;">
+        <div>
+          <label for="streetAddress">Street Address:</label>
+          <input type="text" class="streetAddress text" name="streetAddress" value="address" />
+        </div>
+        <div>
+          <label for="unitNumber">Unit Number:</label>
+          <input type="text" class="unitNumber text" name="unitNumber" value="unit number" />
+        </div>
+        <div>
+          <label for="zip">Zip Code:</label>
+          <input type="text" class="zip text" name="zip" value="zip" />
+        </div>
+        <input type="submit" name="houseSubmit" value="Submit" />
+      </form>
+    </li>
+    <div class="clear"> </div>
+  </ul>  
+  
+</section>

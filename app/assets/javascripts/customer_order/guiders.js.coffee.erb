@@ -1,0 +1,159 @@
+window.Guiders =
+  init: ->
+    guider.createGuider
+      buttons: [
+        { name: "Next" }
+        { name: "Close", onclick: guider.hideAll }
+        { name: "Feature:Select House", onclick: Guiders.showSelectHouse }
+        { name: "Feature:Select Apartment", onclick: Guiders.showSelectApartment }
+        { name: "Feature:Select Business", onclick: Guiders.showSelectBusiness }
+        { name: "Feature:Select Campus/Base", onclick: Guiders.showSelectCampus }
+        { name: "Feature:Select Hotel", onclick: Guiders.showSelectHotel }
+        { name: "Feature:Select Other", onclick: Guiders.showSelectOther }
+      ]
+      description: $('body > section#addressForm > div.help.container').html()
+      id: "addressForm_first"
+      next: "addressForm_second"
+      overlay: true
+      title: "Search Restaurants by Address"
+      width: 600
+    guider.createGuider
+      attachTo: "li.houseIcon.container",
+      buttons: [
+        { name: "Test:Show House Form", onclick: Guiders.clickAttachTo }
+        { name: "Next" }
+        { name: "Close", onclick: guider.hideAll }
+      ]
+      description: "<pre></pre>"
+      id: "addressForm_second"
+      next: "addressForm_third"
+      position: 6
+      title: "House Icon"
+      width: 600
+    guider.createGuider
+      attachTo: "li.apartmentIcon.container",
+      buttons: [
+        { name: "Test:Show Apartment Form", onclick: Guiders.clickAttachTo }
+        { name: "Next" }
+        { name:"Close", onclick: guider.hideAll }
+      ]
+      description: "<pre></pre>"
+      id: "addressForm_third"
+      next: "addressForm_fourth"
+      position: 6
+      title: "Apartment Icon"
+      width: 600
+    guider.createGuider
+      attachTo: "li.businessIcon.container"
+      buttons: [
+        { name: "Test:Show Business Form",onclick: Guiders.clickAttachTo }
+        { name: "Next" }
+        { name:"Close", onclick: guider.hideAll }
+      ]
+      description: "<pre></pre>"
+      id: "addressForm_fourth"
+      next: "addressForm_fifth"
+      position: 6
+      title: "Business Icon"
+      width: 400
+    guider.createGuider
+      attachTo: "li.campusIcon.container"
+      buttons: [
+        { name: "Test:Show Campus Form", onclick: Guiders.clickAttachTo }
+        { name: "Next" }
+        { name:"Close", onclick: guider.hideAll }
+      ]
+      description: "<pre></pre>"
+      id: "addressForm_fifth"
+      next: "addressForm_sixth"
+      position: 6
+      title: "Campus Icon"
+      width: 400
+    guider.createGuider
+      attachTo: "li.hotelIcon.container"
+      buttons: [
+        { name: "Test:Show Hotel Form", onclick: Guiders.clickAttachTo }
+        { name: "Next" }
+        {name:"Close", onclick: guider.hideAll }
+      ]
+      description: "<pre></pre>"
+      id: "addressForm_sixth"
+      next: "addressForm_seventh"
+      position: 6
+      title: "Hotel Icon"
+      width: 400
+    guider.createGuider
+      attachTo: "li.otherIcon.container"
+      buttons: [
+        { name: "Test:Show Other Form", onclick: Guiders.clickAttachTo }
+        { name: "Next" }
+        { name:"Close", onclick: guider.hideAll }
+      ]
+      description: "<pre></pre>"
+      id: "addressForm_seventh"
+      next: "addressForm_first"
+      position: 6
+      title: "Other Icon"
+      width: 400
+    guider.createGuider
+      buttons: [
+        { name:"Close", onclick: guider.hideAll }
+        {name:"Select Address Form", onclick: app.customerOrder.selectAddressForm}
+        {name:"Select Franchise Form", onclick: app.customerOrder.selectFranchiseForm}
+        {name:"Select Login Form", onclick: app.customerOrder.selectLoginForm} 
+        {name:"Select Create Account Form", onclick: app.customerOrder.selectCreateAccountForm}
+        {name:"Search Restaurants by Address", onclick: app.customerOrder.queryByAddress}
+        {name:"Search Restaurants by Franchise", onclick: app.customerOrder.queryByFranchise}
+        {name:"Login", onclick: app.customerOrder.loginWithCredentials}
+        {name:"createAccount", onclick: app.customerOrder.createAccount}
+      ]
+      description: "Current Page State: " +"<br/>"+ app.customerOrder.getState()
+      id: "indexOverviewAnonymous"
+      next: "indexOverviewSession"
+      overlay: true
+      title: "Anonymous User States"
+      width: 600
+    $('.topLeftSlideOut').tabSlideOut
+      tabHandle: '.guiderHandle'                                  # class of the element that will be your tab
+      pathToTabImage: '<%= asset_path 'mockup/guiders.png' %>'   #path to the image for the tab *required*
+      imageHeight: '42px'                                         #height of tab image *required*
+      imageWidth: '143px'                                        #width of tab image *required*    
+      tabLocation: 'bottom'                                      #side of screen where tab lives, top, right, bottom, or left
+      speed: 300                                                 #speed of animation
+      action: 'click'                                            #options: 'click' or 'hover', action to trigger animation
+      topPos: '40px'                                             #position from the top
+      leftPos: '168px'
+      fixedPosition: false                                        #options: true makes it stick(fixed position) on scroll
+    $('.bottomLeftSlideOut').tabSlideOut
+      tabHandle: '.viewStatesHandle'
+      pathToTabImage: '<%= asset_path 'mockup/view_states.png' %>'
+      imageHeight: '143px'
+      imageWidth: '42px' 
+      tabLocation: 'left'
+      speed: 300
+      action: 'click'
+      topPos: '10px'
+      fixedPosition: false
+  showSelectHouse: ->
+    guider.hideAll()
+    guider.show("addressForm_second")
+  clickAttachTo: ->
+    guider._guiders[guider._currentGuiderID].attachTo.click()
+  showSelectApartment: ->
+    guider.hideAll()
+    guider.show("addressForm_third")
+  showSelectBusiness: ->
+    guider.hideAll()
+    guider.show("addressForm_fourth")
+  showSelectCampus: ->
+    guider.hideAll()
+    guider.show("addressForm_fifth")
+  showSelectHotel: ->
+    guider.hideAll()
+    guider.show("addressForm_sixth")
+  showSelectDormitory: ->
+    guider.hideAll()
+    guider.show("addressForm_seventh")
+  showSelectOther: ->
+    guider.hideAll()
+    guider.show("addressForm_eigth")

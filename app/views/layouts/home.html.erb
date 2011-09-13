@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<meta charset="utf-8"/>
+  	<title>Mr Delivery</title>
+  	<!--[if lt IE 9]>
+  		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<link rel="stylesheet" media="all" href=""/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+  	<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <%= javascript_include_tag 'customer_order' %>
+    <%= stylesheet_link_tag 'home/application' %>
+    <%= javascript_include_tag 'vendor/live' %>
+    
+    <%= yield(:head) %>        
+  </head>
+  <body>
+    <%=render :partial => 'header'%>
+    <%= yield  %>
+    <%=render :partial => 'footer'%>
+  </body>

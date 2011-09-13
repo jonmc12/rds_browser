@@ -14,6 +14,13 @@ group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
+  gem 'haml'
+  gem "backbone-rails"
+  # For Compiling Assets
+  gem 'guard'
+  gem 'guard-rails-assets'
+  gem 'rb-fsevent'
+  gem 'growl_notify' # or gem 'growl'
 end
 
 gem 'jquery-rails'
@@ -31,3 +38,6 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+
+gem 'app_constants'
+

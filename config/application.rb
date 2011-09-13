@@ -46,5 +46,8 @@ module RdsBrowser
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    # For guard-rails-assets, as per Guardfile
+    # config.assets.precompile = ['customer_order.js', 'home/app.css']
   end
 end

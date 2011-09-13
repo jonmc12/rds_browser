@@ -1,0 +1,61 @@
+<style type="text/css">
+  section#menuSelector {height:820px;}
+  section#menuSelector li#restaurantMenu { width:68%;list-style:none;float:left; }
+  li#restaurantMenu > div {}
+  li#restaurantMenu > div > img {padding:0 25px;}
+  li#restaurantMenu > div > ul {float:right;padding:0 25px 0 0;}
+  li#restaurantMenu > div > ul > li {list-style:none;float:left;}
+  li#restaurantMenu > div > ul > li > img {padding:12px 0 0 0;}
+  section#menuSelector li#menuCart { width:31%;list-style:none;float:left; }
+  section#menuSelector li#menuCartFull { width:31%;list-style:none;float:left; }
+  section#menuSelector li#restaurantDescription { width:68%;list-style:none;float:left; }
+  section#menuSelector li#restaurantInfo { width:31%;list-style:none;float:left; }
+  
+</style>
+
+<section id="menuSelector">
+  <ul>
+    <li id="restaurantDescription">
+      <div><img src="<%= asset_path 'mockup/menu_restaurant_description.png' %>" alt="" /></div>
+      <div><img src="<%= asset_path 'mockup/menu_restaurant_about.png' %>" alt="" /></div>
+    </li>
+    <li id="restaurantInfo">
+      <div><img src="<%= asset_path 'mockup/menu_restaurant_hours.png' %>" alt="" /></div>
+      <div><img src="<%= asset_path 'mockup/menu_restaurant_ordering_info.png' %>" alt="" /></div>
+    </li>
+    <li id="restaurantMenu">
+      <div>
+        <ul>
+          <li><img src="<%= asset_path 'mockup/menu_type_tab.png' %>" alt="" /></li>
+          <li><img src="<%= asset_path 'mockup/menu_type_tab2.png' %>" alt="" /></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><img src="<%= asset_path 'mockup/menu_hours.png' %>" alt="" /></li>
+          <li><img src="<%= asset_path 'mockup/menu_more_sections.png' %>" alt="" /></li>
+        </ul>
+      </div>
+      <div>
+        <img src="<%= asset_path 'mockup/menu_sample.png' %>" alt="" />
+      </div>
+    </li>
+    <li id="menuCart">
+      <img src="<%= asset_path 'mockup/menu_cart.png' %>" alt="">
+    </li>
+    <li id="menuCartFull">
+      <img src="<%= asset_path 'mockup/menu_cart_full.png' %>" alt="">
+    </li>
+    <!-- <li id="restaurantList">
+      <img src="<%= asset_path 'mockup/restaurants_list.png' %>" alt="" />
+    </li>
+    <li id="restaurantsArrow">
+      <img src="<%= asset_path 'mockup/restaurants_arrow.png' %>" alt="" />
+    </li>
+    <li class="restaurantInfo contain">
+      <div id="restaurantCart"><img src="<%= asset_path 'mockup/restaurants_cart_preview.png' %>" alt="" /></div>
+      <div id="restaurantInfo"><img src="<%= asset_path 'mockup/restaurant_info.png' %>" alt="" /></div>
+      <div id="restaurantPreviewMenu"><img src="<%= asset_path 'mockup/restaurant_preview_menu.png' %>" alt="" /></div>
+    </li> -->
+  </ul>
+</section>

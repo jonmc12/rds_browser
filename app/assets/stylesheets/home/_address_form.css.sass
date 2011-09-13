@@ -1,0 +1,80 @@
+$form_width: 535px
+$icon_width: 82px
+$icon_height: 90px
+$minimum_height: 240px
+
+@mixin icon_background($index)
+  background: image-url('mockup/icons-sprite.png') $index 0px no-repeat
+
+@mixin icon_background_selected($index)
+  background: image-url('mockup/icons-sprite-selected.png') $index 0px no-repeat
+
+@mixin icon_base($multiple)
+  @include icon_background($icon_width*$multiple + 5px)
+  &:hover
+    @include icon_background_selected($icon_width*$multiple + 5px)
+  &.selected
+    @include icon_background_selected($icon_width*$multiple + 5px)
+
+section#addressForm 
+  min-height: $minimum_height
+  > div.container 
+    margin: auto
+    width: $form_width
+  > div.overview.container 
+    padding: 14px 0
+    font-size: 14px
+  > ul 
+    margin: auto
+    width: $form_width
+  > ul.buildingIcons.container 
+    padding-top: 20px
+    > li 
+      list-style: none
+      float: left
+      width: $icon_width+6
+      height: $icon_height+6
+      &:hover 
+        cursor: pointer
+      > a.image
+        padding: 0px 42px 60px 42px
+        &.house 
+          margin-left: 4px 
+          padding: 0px 40px 60px 40px
+          @include icon_base(0)
+        &.apartment
+          @include icon_base(-1)
+        &.business
+          @include icon_base(-2)
+        &.hotel 
+          @include icon_base(-3)
+        &.campus
+          @include icon_base(-4)
+        &.other
+          @include icon_base(-5)
+  > ul.addressForms.container 
+    padding: 20px 0 0 0
+    > li
+      list-style: none
+      float: left
+    > li
+      > form 
+        width: $form_width
+        padding: 10px 0 30px 0
+        margin: auto
+        > div
+          width: $form_width
+          height: 30px
+        label
+          width: 400px
+          height: 30px
+        div > input 
+          width: 260px
+          height: 40px
+          float: right
+          -moz-border-radius: 8px
+          -webkit-border-radius: 8px
+          border-radius: 8px
+          font-size: 24px
+          background: image-url('mockup/address_form_input-bg.png') repeat-x
+          border: 1px solid #b1b1af

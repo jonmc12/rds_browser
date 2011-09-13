@@ -1,0 +1,30 @@
+<style type="text/css">
+  section#restaurantSelector {height:700px;}
+  section#restaurantSelector li#restaurantGallery { width:68%;list-style:none;float:left; }
+  section#restaurantSelector li#restaurantGallery img { padding:10px; }
+  section#restaurantSelector li#restaurantList { width:68%;list-style:none;float:left; }
+  section#restaurantSelector li#restaurantList img { padding:10px; }
+  section#restaurantSelector li:#restaurantsArrow { width:31%;list-style:none;float:left; }
+  section#restaurantSelector li:#restaurantsArrow img { padding:10px; }
+  section#restaurantSelector li:#restaurantInfo { width:31%;list-style:none;float:left; }
+  section#restaurantSelector li:#restaurantInfo img { padding:10px; }
+</style>
+
+<section id="restaurantSelector">
+  <ul>
+    <li id="restaurantGallery">
+      <img src="<%= asset_path 'mockup/restaurants_gallery.png' %>" alt="" />
+    </li>
+    <li id="restaurantList">
+      <img src="<%= asset_path 'mockup/restaurants_list.png' %>" alt="" />
+    </li>
+    <li id="restaurantsArrow">
+      <img src="<%= asset_path 'mockup/restaurants_arrow.png' %>" alt="" />
+    </li>
+    <li class="restaurantInfo contain">
+      <div id="restaurantCart"><img src="<%= asset_path 'mockup/restaurants_cart_preview.png' %>" alt="" /></div>
+      <div id="restaurantInfo"><img src="<%= asset_path 'mockup/restaurant_info.png' %>" alt="" /></div>
+      <div id="restaurantPreviewMenu"><img src="<%= asset_path 'mockup/restaurant_preview_menu.png' %>" alt="" /></div>
+    </li>
+  </ul>
+</section>
