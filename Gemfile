@@ -16,6 +16,9 @@ group :assets do
   gem 'uglifier'
   gem 'haml'
   gem "backbone-rails"
+end
+
+group :development do
   # For Compiling Assets
   gem 'guard'
   gem 'guard-rails-assets'
