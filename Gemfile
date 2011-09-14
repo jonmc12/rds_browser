@@ -12,6 +12,7 @@ gem 'rails', '3.1.0'
 # in production environments by default.
 group :assets do
   gem 'sass-rails'
+  gem 'sass', '3.1.5'
   gem 'coffee-rails'
   gem 'uglifier'
   gem 'haml'
