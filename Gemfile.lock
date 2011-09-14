@@ -97,10 +97,11 @@ GEM
     rb-fsevent (0.4.3.1)
     rdoc (3.9.4)
     sass (3.1.7)
-    sass-rails (3.1.0)
+    sass-rails (3.1.1)
       actionpack (~> 3.1.0)
       railties (~> 3.1.0)
       sass (>= 3.1.4)
+      tilt (~> 1.3.2)
     sprockets (2.0.0)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -123,7 +124,7 @@ PLATFORMS
 DEPENDENCIES
   app_constants
   backbone-rails
-  coffee-rails (~> 3.1.0)
+  coffee-rails
   growl_notify
   guard
   guard-rails-assets
@@ -131,6 +132,6 @@ DEPENDENCIES
   jquery-rails
   rails (= 3.1.0)
   rb-fsevent
-  sass-rails (~> 3.1.0)
+  sass-rails
   turn
   uglifier
