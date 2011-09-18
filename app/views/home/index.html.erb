@@ -7,113 +7,113 @@
 
 <!-- Guiders Shelf -->
 <div class="topLeftSlideOut">
-  <a class="guiderHandle" href="#">Guiders</a>
+  <a class="guiderHandle"  route="#">Guiders
   <ul><span>Guiders</span>
-     <li><a href="javascript:guider.show('header_first')">Header</a></li>
+     <li route="javascript:guider.show('header_first')">Header</li>
      <span>Search Restaurants:</span>
-     <li><a href="javascript:guider.show('addressForm_first')">by Address</a></li>
-     <li><a href="javascript:guider.show('header_first')">by Franchise[todo]</a></li>
+     <li route="javascript:guider.show('addressForm_first')">by Address</li>
+     <li route="javascript:guider.show('header_first')">by Franchise[todo]</li>
      <span>Fill Cart:</span>
-     <li><a href="javascript:guider.show('header_first')">by Order History[todo]</a></li>
-     <li><a href="javascript:guider.show('header_first')">by Menu Preview[todo]</a></li>
-     <li><a href="javascript:guider.show('header_first')">by Restaurant Menu[todo]</a></li>
+     <li route="javascript:guider.show('header_first')">by Order History[todo]</li>
+     <li route="javascript:guider.show('header_first')">by Menu Preview[todo]</li>
+     <li route="javascript:guider.show('header_first')">by Restaurant Menu[todo]</li>
      <span>Checkout and Confirm:</span>
-     <li><a href="javascript:guider.show('header_first')">by Credit Card[todo]</a></li>
-     <li><a href="javascript:guider.show('header_first')">by Cash[todo]</a></li>
+     <li route="javascript:guider.show('header_first')">by Credit Card[todo]</li>
+     <li route="javascript:guider.show('header_first')">by Cash[todo]</li>
      
   </ul>
 </div>
 
 <!-- Test Shelf -->
-<div class="bottomLeftSlideOut">
+<div id="testShelf" class="bottomLeftSlideOut">
   <a class="viewStatesHandle" href="#">View States:</a>
 
   <ul><span>Header Base</span>
-    <li><a href="javascript:app.customerOrder.loginWithCredentials()">Login (todo)</a></li>
-    <li><a href="javascript:app.customerOrder.createAccount()">Create Account (todo)</a></li>
+    <li route="javascript:app.customerOrder.loginWithCredentials()">Login (todo)</li>
+    <li route="javascript:app.customerOrder.createAccount()">Create Account (todo)</li>
   </ul>
   
   <ul><span>Welcome</span>
     <li>Search Restaurants
-      <div><a href="#restaurants/address/form">[by Address]</a></div>
-      <div><a href="#restaurants/franchise/form">[by Franchise]</a></div>
+      <div route="restaurants/address/form">[by Address]</div>
+      <div route="restaurants/franchise/form">[by Franchise]</div>
     </li>
   </ul>
 
   <ul><span>Restaurants by Address</span>
     <li>Select Restaurant
-      <div><a href="#restaurants/address/select/list">[List]</a></div>
-      <div><a href="#restaurants/address/select/gallery">[Gallery]</a></div>
+      <div route="restaurants/address/select/list">[List]</div>
+      <div route="restaurants/address/select/gallery">[Gallery]</div>
     </li>
     <li>Select with Info
-      <div><a href="#restaurants/address/select+Info/list">[List]</a></div>
-      <div><a href="#restaurants/address/select+Info/gallery">[Gallery]</a></div>
+      <div route="restaurants/address/select+Info/list">[List]</div>
+      <div route="restaurants/address/select+Info/gallery">[Gallery]</div>
     </li>
     <li>Select with Preview
-      <div><a href="#restaurants/address/select+PreviewMenu/list">[List]</a></div>
-      <div><a href="#restaurants/address/select+PreviewMenu/gallery">[Gallery]</a></div>
+      <div route="restaurants/address/select+PreviewMenu/list">[List]</div>
+      <div route="restaurants/address/select+PreviewMenu/gallery">[Gallery]</div>
     </li>
     <li>Select with Cart
-      <div><a href="#restaurants/address/select+Cart/list">[List]</a></div>
-      <div><a href="#restaurants/address/select+Cart/gallery">[Gallery]</a></div>
+      <div route="restaurants/address/select+Cart/list">[List]</div>
+      <div route="restaurants/address/select+Cart/gallery">[Gallery]</div>
     </li>
     <li>Select with Info, Cart
-      <div><a href="#restaurants/address/select+Info+Cart/list">[List]</a></div>
-      <div><a href="#restaurants/address/select+Info+Cart/gallery">[Gallery]</a></div>
+      <div route="restaurants/address/select+Info+Cart/list">[List]</div>
+      <div route="restaurants/address/select+Info+Cart/gallery">[Gallery]</div>
     </li>
     <li>Select with Preview, Cart
-      <div><a href="#restaurants/address/select+PreviewMenu+Cart/list">[List]</a></div>
-      <div><a href="#restaurants/address/select+PreviewMenu+Cart/gallery">[Gallery]</a></div>
+      <div route="restaurants/address/select+PreviewMenu+Cart/list">[List]</div>
+      <div route="restaurants/address/select+PreviewMenu+Cart/gallery">[Gallery]</div>
     </li>
   </ul>
 
   <ul><span>Restaurants by Franchise</span>
     <li>Select Restaurant
-      <div><a href="#restaurants/franchise/select/list">[List]</a></div>
-      <div><a href="#restaurants/franchise/select/gallery">[Gallery]</a></div>
+      <div route="restaurants/franchise/select/list">[List]</div>
+      <div route="restaurants/franchise/select/gallery">[Gallery]</div>
     </li>
     <li>Select with Info
-      <div><a href="#restaurants/franchise/select+Info/list">[List]</a></div>
-      <div><a href="#restaurants/franchise/select+Info/gallery">[Gallery]</a></div>
+      <div route="restaurants/franchise/select+Info/list">[List]</div>
+      <div route="restaurants/franchise/select+Info/gallery">[Gallery]</div>
     </li>
     <li>Select with Preview
-      <div><a href="#restaurants/franchise/select+PreviewMenu/list">[List]</a></div>
-      <div><a href="#restaurants/franchise/select+PreviewMenu/gallery">[Gallery]</a></div>
+      <div route="restaurants/franchise/select+PreviewMenu/list">[List]</div>
+      <div route="restaurants/franchise/select+PreviewMenu/gallery">[Gallery]</div>
     </li>
     <li>Select with Cart
-      <div><a href="#restaurants/franchise/select+Cart/list">[List]</a></div>
-      <div><a href="#restaurants/franchise/select+Cart/gallery">[Gallery]</a></div>
+      <div route="restaurants/franchise/select+Cart/list">[List]</div>
+      <div route="restaurants/franchise/select+Cart/gallery">[Gallery]</div>
     </li>
     <li>Select with Info, Cart
-      <div><a href="#restaurants/franchise/select+Info+Cart/list">[List]</a></div>
-      <div><a href="#restaurants/franchise/select+Info+Cart/gallery">[Gallery]</a></div>
+      <div route="restaurants/franchise/select+Info+Cart/list">[List]</div>
+      <div route="restaurants/franchise/select+Info+Cart/gallery">[Gallery]</div>
     </li>
     <li>Select with Preview, Cart
-      <div><a href="#restaurants/franchise/select+PreviewMenu+Cart/list">[List]</a></div>
-      <div><a href="#restaurants/franchise/select+PreviewMenu+Cart/gallery">[Gallery]</a></div>
+      <div route="restaurants/franchise/select+PreviewMenu+Cart/list">[List]</div>
+      <div route="restaurants/franchise/select+PreviewMenu+Cart/gallery">[Gallery]</div>
     </li>
   </ul>
   
   <ul><span>Menu Items</span>
     <li>Select Menu Item
-      <div><a href="#menuitems/select+PreviewMenu+Cart/list">[List]</a></div>
-      <div><a href="#menuitems/select+PreviewMenu+Cart/gallery">[Gallery]</a></div>
+      <div route="menuitems/select+PreviewMenu+Cart/list">[List]</div>
+      <div route="menuitems/select+PreviewMenu+Cart/gallery">[Gallery]</div>
       
-      <div><a href="javascript:app.customerOrder.set({state:'anonymous.menuitems.selectMenuItemByRestaurant'})">[by Restaurant]</a></div>
-      <div><a href="javascript:app.customerOrder.set({state:'anonymous.menuitems.selectMenuItemByRestaurantWithFullCart'})">[with Full Cart]</a></div>
-      <div><a href="javascript:app.customerOrder.set({state:'anonymous.menuitems.selectMenuItemOptions'})">[Options]</a></div>
+      <div route="javascript:app.customerOrder.set({state:'anonymous.menuitems.selectMenuItemByRestaurant'})">[by Restaurant]</div>
+      <div route="javascript:app.customerOrder.set({state:'anonymous.menuitems.selectMenuItemByRestaurantWithFullCart'})">[with Full Cart]</div>
+      <div route="javascript:app.customerOrder.set({state:'anonymous.menuitems.selectMenuItemOptions'})">[Options]</div>
     </li>
     <li>View Restaurant Info
-      <div><a href="javascript:app.customerOrder.set({state:'anonymous.menuitems.viewRestaurantInfo'})">[Text]</a></div>
+      <div route="javascript:app.customerOrder.set({state:'anonymous.menuitems.viewRestaurantInfo'})">[Text]</div>
     </li>
   </ul>
 
   <ul><span>Checkout</span>
-    <li><a href="javascript:app.customerOrder.inputDeliveryAndPaymentInformation()">Input Delivery and Payment Information</a></li>
+    <li route="javascript:app.customerOrder.inputDeliveryAndPaymentInformation()">Input Delivery and Payment Information</li>
   </ul>
 
   <ul><span>Confirm</span>
-    <li><a href="javascript:app.customerOrder.selectOrderPurchaseConfirmation()">Select Order Purchase Confirmation</a></li>
+    <li route="javascript:app.customerOrder.selectOrderPurchaseConfirmation()">Select Order Purchase Confirmation</li>
   </ul>
    
 </div>
