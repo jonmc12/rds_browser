@@ -1,98 +1,6 @@
 <script type="text/javascript">
   $(document).ready(function(){
-    guider.createGuider({
-      buttons: [
-        {name: "Next"},{name:"Close", onclick: guider.hideAll},
-        {name: "Feature:Login", onclick:showLoginGuider},
-        {name: "Feature:Create Account", onclick:showLoginGuider},
-        {name: "Feature:Chat", onclick:showChatGuider},
-        {name: "Feature:Restaurants by Address", onclick:showRestaurantsByAddressGuider},
-        {name: "Feature:Restaurants by Franchise", onclick:showRestaurantsByFranchiseGuider},
-        {name: "Feature:Order History", onclick:showOrderHistoryGuider}
-      ],
-      description: $('body > header > div.help.container').html(),
-      id: "header_first",
-      next: "header_second",
-      overlay: true,
-      title: "Mr Delivery Frontpage Header!",
-      width: 600
-    });
-    
-    guider.createGuider({
-      attachTo: "ul.userLinks.container",
-      buttons: [{name: "Test:Login"},{name: "Test:Create Account"},{name: "Next"},{name:"Close", onclick: guider.hideAll}],
-      description: "<pre>"+$('ul.userLinks.container > div.help.container').html()+"</pre>",
-      id: "header_second",
-      next: "header_third",
-      position: 5,
-      title: "Login and Create Account",
-      width: 600
-    });
-    
-    guider.createGuider({
-      attachTo: "div.chatButton.container",
-      buttons: [{name: "Test:Login"},{name: "Test:Chat", onclick:showChatGuider},{name: "Next"},{name:"Close", onclick: guider.hideAll}],
-      description: "<pre>"+$('div.chatButton.container > div.help.container').html()+"</pre>",
-      id: "header_third",
-      next: "header_fourth",
-      position: 5,
-      title: "Chat with Customer Service",
-      width: 600
-    });
-    
-    guider.createGuider({
-      attachTo: "li.restaurantByAddress.container",
-      buttons: [{name: "Test:Restaurants by Address",onclick:showRestaurantsByAddressGuider},{name: "Next"},{name:"Close", onclick: guider.hideAll}],
-      description: "<pre>"+$('li.restaurantByAddress.container > div.help.container').html()+"</pre>",
-      id: "header_fourth",
-      next: "header_fifth",
-      position: 5,
-      title: "Restaurants by Address",
-      width: 400
-    });
-    
-    guider.createGuider({
-      attachTo: "li.restaurantByFranchise.container",
-      buttons: [{name: "Test:Restaurants by Franchise",onclick:showRestaurantsByFranchiseGuider},{name: "Next"},{name:"Close", onclick: guider.hideAll}],
-      description: "<pre>"+$('li.restaurantByFranchise.container > div.help.container').html()+"</pre>",
-      id: "header_fifth",
-      next: "header_sixth",
-      position: 5,
-      title: "Restaurants by Franchise",
-      width: 400
-    });
-    
-    guider.createGuider({
-      attachTo: "li.orderHistory.container",
-      buttons: [{name: "Test:Order History",onclick:showOrderHistoryGuider},{name: "Next"},{name:"Close", onclick: guider.hideAll}],
-      description: "<pre>"+$('li.orderHistory.container > div.help.container').html()+"</pre>",
-      id: "header_sixth",
-      next: "header_seventh",
-      position: 5,
-      title: "Order History",
-      width: 400
-    });
-    
-    function showLoginGuider() {
-      guider.hideAll();
-      guider.show("header_second");
-    }
-    function showChatGuider() {
-      guider.hideAll();
-      guider.show("header_third");
-    }
-    function showRestaurantsByAddressGuider() {
-      guider.hideAll();
-      guider.show("header_fourth");
-    }
-    function showRestaurantsByFranchiseGuider() {
-      guider.hideAll();
-      guider.show("header_fifth");
-    }
-    function showOrderHistoryGuider() {
-      guider.hideAll();
-      guider.show("header_sixth");
-    }
+
   });
 </script>
 
@@ -107,11 +15,11 @@
     <li>
       <!--  Order Tabs -->
       <ul class="orderTabs container">
-        <li class="restaurantByAddress container">
+        <li class="restaurantByAddress container" route="restaurants/address/form">
           <div class="help container" style="display:none;"><%=raw @spec[:feature_restaurants_by_address]%></div>
           <img src="<%= asset_path 'mockup/restaurant_tab.png' %>" />
         </li>
-        <li class="restaurantByFranchise container">
+        <li class="restaurantByFranchise container" route="restaurants/franchise/form">
           <div class="help container" style="display:none;"><%=raw @spec[:feature_restaurants_by_franchise]%></div>
           <img src="<%= asset_path 'mockup/restaurant_franchise_tab.png' %>" />
         </li>

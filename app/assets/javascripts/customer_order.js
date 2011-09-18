@@ -21,4 +21,6 @@
 //= require models/customer_order
 //= require routers/customer_order
 //= require views/customer_order/customer_order
+//= require views/customer_order/header
 //= require views/customer_order/welcome_address_form
+//= require views/customer_order/test_shelf

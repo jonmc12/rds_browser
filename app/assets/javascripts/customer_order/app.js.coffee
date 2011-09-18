@@ -1,10 +1,11 @@
 window.App =
 	init: ->
 	  window.app = {}
+	  app.testShelfView = new App.Views.TestShelf()
 	  app.customerOrderView = new App.Views.CustomerOrder()
+	  app.header = new App.Views.Header( {el:$('header')} )
 	  app.customerOrder = new App.CustomerOrder({ view:app.customerOrderView })
 	  app.customerOrderRouter = new App.Routers.CustomerOrder()
-	  Backbone.history.start()
 	  app.welcomeAddressForm = new App.Views.WelcomeAddressForm( {el:$('section#addressForm')} )
 	  app.defaultState = 
 	    "anonymous":
@@ -27,5 +28,7 @@ App.Collections = {}
 $(document).ready ->
   App.init()
   Guiders.init()
+  Backbone.history.start(pushState: true, root: '/')
+  
   
 

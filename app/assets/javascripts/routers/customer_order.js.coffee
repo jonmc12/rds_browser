@@ -9,6 +9,9 @@ App.Routers.CustomerOrder = Backbone.Router.extend
     ":object/:filter/:context/:format"    :   "select"
     
   index: ->
+  
+  renderOrderHistory: ->
+    alert 'todo'
     
   franchiseRestaurants: (id, address) ->
     if address

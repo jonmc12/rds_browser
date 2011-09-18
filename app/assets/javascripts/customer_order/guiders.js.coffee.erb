@@ -134,6 +134,7 @@ window.Guiders =
       action: 'click'
       topPos: '10px'
       fixedPosition: false
+    app.header.initGuider()
   showSelectHouse: ->
     guider.hideAll()
     guider.show("addressForm_second")
@@ -157,3 +158,18 @@ window.Guiders =
   showSelectOther: ->
     guider.hideAll()
     guider.show("addressForm_eigth")
+  showLoginGuider: ->
+    guider.hideAll()
+    guider.show("header_second")
+  showChatGuider: ->
+    guider.hideAll()
+    guider.show("header_third")
+  showRestaurantsByAddressGuider: ->
+    guider.hideAll()
+    guider.show("header_fourth")
+  showRestaurantsByFranchiseGuider: ->
+    guider.hideAll()
+    guider.show("header_fifth")
+  showOrderHistoryGuider: ->
+    guider.hideAll()
+    guider.show("header_sixth")
