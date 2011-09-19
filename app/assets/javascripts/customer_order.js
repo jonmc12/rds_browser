@@ -15,6 +15,7 @@
 //= require vendor/jquery.tabSlideOut.v1.3
 //= require vendor/guider
 //= require vendor/live
+//= require vendor/hugrid
 /*  Customer Order  */
 //= require customer_order/guiders
 //= require customer_order/app
