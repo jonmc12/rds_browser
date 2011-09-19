@@ -30,14 +30,14 @@ $(document).ready ->
   Guiders.init()
   Backbone.history.start(pushState: true, root: '/')
   # Heads up grid settings
-  pageUnits = 'px'
-  colUnits = 'px'
-  pagewidth = 896
-  columns = 10
-  columnwidth = 92
-  gutterwidth = 24
-  pagetopmargin = 35
-  rowheight = 20
+  window.pageUnits = 'px'
+  window.colUnits = 'px'
+  window.pagewidth = 992
+  window.columns = 10
+  window.columnwidth = 92
+  window.gutterwidth = 8
+  window.pagetopmargin = 35
+  window.rowheight = 30
   makehugrid()
   setgridonload()
   
