@@ -1,8 +1,6 @@
 <!-- Home Page / Front Page -->
 <% content_for :head do%>
 
-<%#= javascript_include_tag 'live' if Rails.env == 'development'%>
-
 <% end %>
 
 <!-- Guiders Shelf -->
@@ -37,6 +35,9 @@
     <li>Search Restaurants
       <div route="restaurants/address/form">[by Address]</div>
       <div route="restaurants/franchise/form">[by Franchise]</div>
+    </li>
+    <li>History
+      <div route="orderHistory">[by Order History]</div>
     </li>
   </ul>
 
