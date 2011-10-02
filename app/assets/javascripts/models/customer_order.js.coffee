@@ -29,7 +29,7 @@ App.CustomerOrder = Backbone.Model.extend
           format:   ["form"]
         "select":
           objects:  ["orders"]
-          filter:   ["recentHistory"]
+          filter:   ["recent"]
           context:  ["orderHistory"]
           format:   ["list"]
         "view": 
@@ -140,7 +140,7 @@ App.CustomerOrder = Backbone.Model.extend
 
   initialize: (args) ->
     this.bind 'change:state', (model, state) ->
-      app.customerOrderView.mapStates(this.getState())
+      app.customerOrderView.mapStates @getState()
     
   renderFront: ->
   
@@ -155,13 +155,13 @@ App.CustomerOrder = Backbone.Model.extend
       attributes: this.get('state')[session][page][goal]
   getSessionState: ->
     for session in ["all","session","anonymous"]
-      return session if this.get('state')[session]
+      return session if @get('state')[session]
   getPageState: (sessionState)->
     for page in ["header","footer","welcome","restaurants","menuitems","checkout","confirm"]
-      return page if this.get('state')[sessionState][page]
+      return page if @get('state')[sessionState][page]
   getUserGoal: (sessionState,pageState) ->
     for goal in ["select","query","input","view"]
-      return goal if this.get('state')[sessionState][pageState][goal]
+      return goal if @get('state')[sessionState][pageState][goal]
     
   #     
   #   processSession(this.get('state').session) if state.session

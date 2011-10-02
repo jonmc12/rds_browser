@@ -32,19 +32,22 @@ App.Views.CustomerOrder = Backbone.View.extend
   ## search restaurant ##
   renderWelcome: (state) ->
     sectionArray = [
-      "section#featured"
-      "section#company"
-      "section#company > ul > li"
-      "section#company > ul > li > div"
-      "section#instructions"
-      "section#instructions > ul > li"
-      "section#instructions > ul > li > div"
-      "section#newProduct"
-      "section#newProduct > ul > li"
-      "section#newProduct > ul > li > div"
-      "section#"+state.attributes.filter[0]+"Form"
-      "section#"+state.attributes.filter[0]+"Form > ul"
-      "section#"+state.attributes.filter[0]+"Form > ul > li"
+      "section#featured" if "anonymous" is state.session
+      "section#company" if "anonymous" is state.session
+      "section#company > ul > li" if "anonymous" is state.session
+      "section#company > ul > li > div" if "anonymous" is state.session
+      "section#instructions" if "anonymous" is state.session
+      "section#instructions > ul > li" if "anonymous" is state.session
+      "section#instructions > ul > li > div" if "anonymous" is state.session
+      "section#newProduct" if "anonymous" is state.session 
+      "section#newProduct > ul > li" if "anonymous" is state.session
+      "section#newProduct > ul > li > div" if "anonymous" is state.session
+      "section#"+state.attributes.filter[0]+"Form" if state.attributes.filter[0] in ["address","franchise"]
+      "section#"+state.attributes.filter[0]+"Form > ul" if state.attributes.filter[0] in ["address","franchise"]
+      "section#"+state.attributes.filter[0]+"Form > ul > li" if state.attributes.filter[0] in ["address","franchise"]
+      "section#recentOrders" if "orders" in state.attributes.objects
+      "section#recentOrders > ul" if "orders" in state.attributes.objects
+      "section#recentOrders > ul > li" if "orders" in state.attributes.objects
     ]
     this.showSections(sectionArray)
 

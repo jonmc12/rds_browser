@@ -23,7 +23,7 @@
           <div class="help container" style="display:none;"><%=raw @spec[:feature_restaurants_by_franchise]%></div>
           <img src="<%= asset_path 'mockup/restaurant_franchise_tab.png' %>" />
         </li>
-        <li class="orderHistory container">
+        <li class="orderHistory container" route="orders/recent">
           <div class="help container" style="display:none;"><%=raw @spec[:feature_order_history]%></div>
           <img src="<%= asset_path 'mockup/past_orders_tab.png' %>" />
         </li>

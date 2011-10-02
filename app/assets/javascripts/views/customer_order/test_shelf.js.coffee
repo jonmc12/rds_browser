@@ -4,4 +4,4 @@ App.Views.TestShelf = Backbone.View.extend
     "click ul > li > div": "processTestLinks"
   
   processTestLinks: (obj) ->
-    app.customerOrderRouter.navigate($(obj.currentTarget).attr('route'), true);
+    app.customerOrderRouter.navigate($(obj.currentTarget).attr('route'), true)

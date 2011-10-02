@@ -1,0 +1,26 @@
+$form_width: 805px
+$order_width: 202px
+$order_height: 320px
+$minimum_height: 540px
+
+section#recentOrders
+  margin: 0px auto
+  min-height: $minimum_height
+  > div.container
+    margin: auto
+    width: 800px
+  > div.overview.container
+    margin: auto
+    width: 820px
+  > div.header
+    margin-bottom: 20px
+  > ul.recentOrders 
+    margin: auto
+    width: $form_width
+    padding: 20px 20px
+    > li 
+      list-style: none
+      float: left
+      width: $order_width+65
+      height: $order_height+6
+      &:hover

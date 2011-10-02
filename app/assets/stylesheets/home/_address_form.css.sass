@@ -16,7 +16,8 @@ $minimum_height: 240px
   &.selected
     @include icon_background_selected($icon_width*$multiple + 5px)
 
-section#addressForm 
+section#addressForm
+  margin: 0px auto
   min-height: $minimum_height
   > div.container 
     margin: auto
@@ -62,19 +63,31 @@ section#addressForm
         width: $form_width
         padding: 10px 0 30px 0
         margin: auto
+        > input
+          float: right
+          padding: 10px 0px 32px 0px
         > div
           width: $form_width
-          height: 30px
+          height: 40px
+          padding: 8px 0px
         label
           width: 400px
           height: 30px
+          font-size: 16px
+          font-family: helvetica
+          padding: 0px 20px
+          margin-top: 18px
+          font-weight: bold
         div > input 
-          width: 260px
+          width: 212px
           height: 40px
           float: right
           -moz-border-radius: 8px
           -webkit-border-radius: 8px
           border-radius: 8px
-          font-size: 24px
+          font-size: 20px
           background: image-url('mockup/address_form_input-bg.png') repeat-x
           border: 1px solid #b1b1af
+          text-align: right
+          padding: 0px 8px
+          color: #CCC

@@ -1,7 +1,7 @@
 App.Routers.CustomerOrder = Backbone.Router.extend
   routes:
     ""                                    :   "index",
-    "orderHistory"                        :   "renderOrderHistory"
+    "orders/:filter"                      :   "renderOrderHistory"
     "franchises/:id/restaurants"          :   "franchiseRestaurants"
     "franchises/:id/restaurants/address/:address"    :   "franchiseRestaurants"
     "restaurants/:id"                     :   "restaurant"
@@ -10,8 +10,16 @@ App.Routers.CustomerOrder = Backbone.Router.extend
     
   index: ->
   
-  renderOrderHistory: ->
-    alert 'todo'
+  renderOrderHistory: (filter) ->
+    queryState = 
+      "session":
+        "welcome":
+          "select":
+            objects:  ["orders"]
+            filter:   ["recent"]
+            context:  [filter]
+            format:   ["list"]
+    app.customerOrder.set( {state: queryState} )
     
   franchiseRestaurants: (id, address) ->
     if address
