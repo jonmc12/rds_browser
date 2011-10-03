@@ -5,6 +5,7 @@ window.App =
 	  app.customerOrderView = new App.Views.CustomerOrder()
 	  app.header = new App.Views.Header( {el:$('header')} )
 	  app.customerOrder = new App.CustomerOrder({ view:app.customerOrderView })
+	  app.customerAddress = new App.CustomerAddress()
 	  app.customerOrderRouter = new App.Routers.CustomerOrder()
 	  app.welcomeAddressForm = new App.Views.WelcomeAddressForm( {el:$('section#addressForm')} )
 	  app.defaultState = 

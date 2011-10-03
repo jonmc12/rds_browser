@@ -39,4 +39,8 @@ RdsBrowser::Application.configure do
 
   # Allow pass debug_assets=true as a query parameter to load pages with unpackaged assets
   config.assets.allow_debugging = true
+  config.assets.debug = true
+  config.assets.compress = false
+  config.assets.prefix = "../spec/javascripts/generated/assets"
+  config.assets.manifest = Rails.root.join("spec/javascripts/generated/assets")
 end

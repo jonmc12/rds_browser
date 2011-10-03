@@ -24,6 +24,9 @@ group :development do
   gem 'guard-rails-assets'
   gem 'rb-fsevent'
   gem 'growl_notify' # or gem 'growl'
+  gem "jasmine", 
+    :git => 'git://github.com/pivotal/jasmine-gem.git',
+    :branch => "1.2.rc1"
 end
 
 gem 'jquery-rails'

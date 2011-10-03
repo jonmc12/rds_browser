@@ -14,12 +14,12 @@
 //= require vendor/jquery.formserialize
 //= require vendor/jquery.tabSlideOut.v1.3
 //= require vendor/guider
-//= require vendor/live
 //= require vendor/hugrid
 /*  Customer Order  */
 //= require customer_order/guiders
 //= require customer_order/app
 //= require models/customer_order
+//= require models/customer_address
 //= require routers/customer_order
 //= require views/customer_order/customer_order
 //= require views/customer_order/header
