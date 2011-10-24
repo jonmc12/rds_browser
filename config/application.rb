@@ -48,6 +48,6 @@ module RdsBrowser
     config.assets.version = '1.0'
     
     # For guard-rails-assets, as per Guardfile
-    config.assets.precompile = ['customer_order.js', 'home/application.css']
+    #config.assets.precompile = ['customer_order.js', 'home/application.css']
   end
 end

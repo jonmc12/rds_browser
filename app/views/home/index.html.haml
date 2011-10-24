@@ -1,0 +1,121 @@
+/ Home Page / Front Page
+- content_for :head do
+  \
+/ Guiders Shelf
+.topLeftSlideOut
+  %a.guiderHandle{:route => "#"} Guiders
+  %ul
+    %span Guiders
+    %li{:route => "javascript:guider.show('header_first')"} Header
+    %span Search Restaurants:
+    %li{:route => "javascript:guider.show('addressForm_first')"} by Address
+    %li{:route => "javascript:guider.show('header_first')"} by Franchise[todo]
+    %span Fill Cart:
+    %li{:route => "javascript:guider.show('header_first')"} by Order History[todo]
+    %li{:route => "javascript:guider.show('header_first')"} by Menu Preview[todo]
+    %li{:route => "javascript:guider.show('header_first')"} by Restaurant Menu[todo]
+    %span Checkout and Confirm:
+    %li{:route => "javascript:guider.show('header_first')"} by Credit Card[todo]
+    %li{:route => "javascript:guider.show('header_first')"} by Cash[todo]
+/ Test Shelf
+#testShelf.bottomLeftSlideOut
+  %a.viewStatesHandle{:href => "#"} View States:
+  %ul
+    %span Header Base
+    %li{:route => "javascript:app.customerOrder.loginWithCredentials()"} Login (todo)
+    %li{:route => "javascript:app.customerOrder.createAccount()"} Create Account (todo)
+  %ul
+    %span Welcome
+    %li
+      Search Restaurants
+      %div{:route => "restaurants/address/form"} [by Address]
+      %div{:route => "restaurants/franchise/form"} [by Franchise]
+    %li
+      History
+      %div{:route => "orderHistory"} [by Order History]
+  %ul
+    %span Restaurants by Address
+    %li
+      Select Restaurant
+      %div{:route => "restaurants/address/select/list"} [List]
+      %div{:route => "restaurants/address/select/gallery"} [Gallery]
+    %li
+      Select with Info
+      %div{:route => "restaurants/address/select+Info/list"} [List]
+      %div{:route => "restaurants/address/select+Info/gallery"} [Gallery]
+    %li
+      Select with Preview
+      %div{:route => "restaurants/address/select+PreviewMenu/list"} [List]
+      %div{:route => "restaurants/address/select+PreviewMenu/gallery"} [Gallery]
+    %li
+      Select with Cart
+      %div{:route => "restaurants/address/select+Cart/list"} [List]
+      %div{:route => "restaurants/address/select+Cart/gallery"} [Gallery]
+    %li
+      Select with Info, Cart
+      %div{:route => "restaurants/address/select+Info+Cart/list"} [List]
+      %div{:route => "restaurants/address/select+Info+Cart/gallery"} [Gallery]
+    %li
+      Select with Preview, Cart
+      %div{:route => "restaurants/address/select+PreviewMenu+Cart/list"} [List]
+      %div{:route => "restaurants/address/select+PreviewMenu+Cart/gallery"} [Gallery]
+  %ul
+    %span Restaurants by Franchise
+    %li
+      Select Restaurant
+      %div{:route => "restaurants/franchise/select/list"} [List]
+      %div{:route => "restaurants/franchise/select/gallery"} [Gallery]
+    %li
+      Select with Info
+      %div{:route => "restaurants/franchise/select+Info/list"} [List]
+      %div{:route => "restaurants/franchise/select+Info/gallery"} [Gallery]
+    %li
+      Select with Preview
+      %div{:route => "restaurants/franchise/select+PreviewMenu/list"} [List]
+      %div{:route => "restaurants/franchise/select+PreviewMenu/gallery"} [Gallery]
+    %li
+      Select with Cart
+      %div{:route => "restaurants/franchise/select+Cart/list"} [List]
+      %div{:route => "restaurants/franchise/select+Cart/gallery"} [Gallery]
+    %li
+      Select with Info, Cart
+      %div{:route => "restaurants/franchise/select+Info+Cart/list"} [List]
+      %div{:route => "restaurants/franchise/select+Info+Cart/gallery"} [Gallery]
+    %li
+      Select with Preview, Cart
+      %div{:route => "restaurants/franchise/select+PreviewMenu+Cart/list"} [List]
+      %div{:route => "restaurants/franchise/select+PreviewMenu+Cart/gallery"} [Gallery]
+  %ul
+    %span Menu Items
+    %li
+      Select Menu Item
+      %div{:route => "menuitems/select+PreviewMenu+Cart/list"} [List]
+      %div{:route => "menuitems/select+PreviewMenu+Cart/gallery"} [Gallery]
+      %div{:route => "javascript:app.customerOrder.set({state:'anonymous.menuitems.selectMenuItemByRestaurant'})"} [by Restaurant]
+      %div{:route => "javascript:app.customerOrder.set({state:'anonymous.menuitems.selectMenuItemByRestaurantWithFullCart'})"} [with Full Cart]
+      %div{:route => "javascript:app.customerOrder.set({state:'anonymous.menuitems.selectMenuItemOptions'})"} [Options]
+    %li
+      View Restaurant Info
+      %div{:route => "javascript:app.customerOrder.set({state:'anonymous.menuitems.viewRestaurantInfo'})"} [Text]
+  %ul
+    %span Checkout
+    %li{:route => "javascript:app.customerOrder.inputDeliveryAndPaymentInformation()"} Input Delivery and Payment Information
+  %ul
+    %span Confirm
+    %li{:route => "javascript:app.customerOrder.selectOrderPurchaseConfirmation()"} Select Order Purchase Confirmation
+/ Input - Addressed, based on Building Type from Customer
+/ Output - Restaurant Page Loaded
+= render :partial => 'address_form'
+= render :partial => 'franchise_form'
+= render :partial => 'restaurant_search_header'
+= render :partial => 'recent_orders'
+= render :partial => 'menu_header'
+/ Featured Restuarants or Menu Items
+= render :partial => 'featured_product'
+= render :partial => 'restaurant_select'
+= render :partial => 'menu_select'
+= render :partial => 'restaurant_info'
+/ Mr Delivery Story
+= render :partial => 'company_story'
+/ New Restaurants or Menu Items
+= render :partial => 'new_product'

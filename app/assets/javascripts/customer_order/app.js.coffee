@@ -16,7 +16,7 @@ window.App =
             filter:   ["address"]
             context:  []
             format:   ["form"]
-    app.customerOrder.set 
+    app.customerOrder.set
       state:app.defaultState
       view:app.customerOrderView
     $('li.houseIcon.container').click()
@@ -40,6 +40,6 @@ $(document).ready ->
   window.pagetopmargin = 35
   window.rowheight = 30
   makehugrid()
-  setgridonload()
+#  setgridonload()
   
 
