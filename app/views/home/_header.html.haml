@@ -1,0 +1,32 @@
+%header
+  .help.container{:style => "display:none;"}= raw @spec[:object_header_spec]
+  %ul
+    %li
+      / Logo
+      %img{:src => "#{asset_path 'mockup/mrd_logo.png'}"}/
+    %li
+      / Order Tabs
+      %ul.orderTabs.container
+        %li.restaurantByAddress.container{:route => "restaurants/address/form"}
+          .help.container{:style => "display:none;"}
+            = raw @spec[:feature_restaurants_by_address]
+          %img{:src => "#{asset_path 'mockup/restaurant_tab.png'}"}/
+        %li.restaurantByFranchise.container{:route => "restaurants/franchise/form"}
+          .help.container{:style => "display:none;"}
+            = raw @spec[:feature_restaurants_by_franchise]
+          %img{:src => "#{asset_path 'mockup/restaurant_franchise_tab.png'}"}/
+        %li.orderHistory.container{:route => "orders/recent"}
+          .help.container{:style => "display:none;"}
+            = raw @spec[:feature_order_history]
+          %img{:src => "#{asset_path 'mockup/past_orders_tab.png'}"}/
+    %li
+      / User / Session
+      %ul.userLinks.container
+        .help.container{:style => "display:none;"}
+          = raw @spec[:feature_login_spec]
+          = raw @spec[:feature_create_account_spec]
+        %img{:src => "#{asset_path 'mockup/header_login_buttons.png'}"}/
+      .chatButton.container
+        .help.container{:style => "display:none;"}= raw @spec[:feature_chat_spec]
+        %img{:src => "#{asset_path 'mockup/header_chat_button.png'}"}/
+  .clearBoth

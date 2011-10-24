@@ -1,0 +1,14 @@
+:css
+  div.overview.container {padding:14px 0;font-size:14px;}
+%section#franchiseForm{:style => "display:none;"}
+  / Address Input
+  / Zip Input
+  / Building Input
+  .overview.container
+    %span Please select your city:
+  .buildingIcons.container
+    %img{:alt => "", :src => "#{asset_path 'mockup/form_building_icons.png'}"}/
+  .addressInput.container
+    %img{:alt => "", :src => "#{asset_path 'mockup/form_address_input.png'}"}/
+  .zipInput.container
+    %img{:alt => "", :src => "#{asset_path 'mockup/form_zip_input.png'}"}/

@@ -1,0 +1,109 @@
+%section#addressForm
+  .help.container{:style => "display:none;"}
+    = raw @spec[:object_address_form_spec]
+  / Address Input
+  / Zip Input
+  / Building Input
+  %ul.buildingIcons.container
+    %li.houseIcon.container{:form => "house"}
+      %a.house.image{:href => "#"}  
+    %li.apartmentIcon.container{:form => "apartment"}
+      %a.apartment.image{:href => "#"}  
+    %li.businessIcon.container{:form => "business"}
+      %a.business.image{:href => "#"}  
+    %li.campusIcon.container{:form => "campus"}
+      %a.campus.image{:href => "#"}  
+    %li.hotelIcon.container{:form => "hotel"}
+      %a.hotel.image{:href => "#"}  
+    %li.otherIcon.container{:form => "other"}
+      %a.other.image{:href => "#"}  
+    .clear   
+  %ul.addressForms.container
+    %li.houseForm.container
+      %form
+        /
+          <div class="addressInput container"><img src="/images/mockup/form_address_input.png" alt="" /></div>
+          <div class="zipInput container"><img src="/images/mockup/form_zip_input.png" alt="" /></div>
+        %div
+          %label{:for => "streetAddress"} Street Address:
+          %input.streetAddress.text{:type => "text", :value => "123 Main St"}/
+        %div
+          %label{:for => "zip"} Zip Code:
+          %input.zip.text{:type => "text", :value => "78705"}/
+        %input{:name => "houseSubmit", :src => "#{asset_path 'mockup/find_restaurants_button.png'}", :type => "image", :value => "Submit"}/
+    %li.apartmentForm.container
+      %form{:style => "display:none;"}
+        %div
+          %label{:for => "apartmentName"} Apartment Name:
+          %input.apartmentName.text{:name => "apartmentName", :type => "text", :value => "apartment name"}/
+        %div
+          %label{:for => "apartmentNumber"} Apartment Number:
+          %input.apartmentNumber.text{:name => "apartmentNumber", :type => "text", :value => "apartment number"}/
+        %div
+          %label{:for => "streetAddress"} Street Address:
+          %input.streetAddress.text{:name => "streetAddress", :type => "text", :value => "address"}/
+        %div
+          %label{:for => "zip"} Zip Code:
+          %input.zip.text{:name => "zip", :type => "text", :value => "zip"}/
+        %input{:name => "houseSubmit", :src => "#{asset_path 'mockup/find_restaurants_button.png'}", :type => "image", :value => "Submit"}/
+    %li.businessForm.container
+      %form{:style => "display:none;"}
+        %div
+          %label{:for => "businessName"} Business Name:
+          %input.businessName.text{:name => "businessName", :type => "text", :value => "business name"}/
+        %div
+          %label{:for => "businessNumber"} Suite Number:
+          %input.businessNumber.text{:name => "businessNumber", :type => "text", :value => "business number"}/
+        %div
+          %label{:for => "streetAddress"} Street Address:
+          %input.streetAddress.text{:name => "streetAddress", :type => "text", :value => "address"}/
+        %div
+          %label{:for => "zip"} Zip Code:
+          %input.zip.text{:name => "zip", :type => "text", :value => "zip"}/
+        %input{:name => "houseSubmit", :src => "#{asset_path 'mockup/find_restaurants_button.png'}", :type => "image", :value => "Submit"}/
+    %li.campusForm.container
+      %form{:style => "display:none;"}
+        %div
+          %label{:for => "campusName"} Campus Name:
+          %input.campusName.text{:name => "campusName", :type => "text", :value => "campus name"}/
+        %div
+          %label{:for => "building"} Building:
+          %input.building.text{:name => "building", :type => "text", :value => "building"}/
+        %div
+          %label{:for => "buildingNumber"} Room Number:
+          %input.buildingNumber.text{:name => "buildingNumber", :type => "text", :value => "building number"}/
+        %div
+          %label{:for => "streetAddress"} Street Address:
+          %input.streetAddress.text{:name => "streetAddress", :type => "text", :value => "address"}/
+        %div
+          %label{:for => "city"} City:
+          %input.city.text{:name => "city", :type => "text", :value => "city"}/
+        %input{:name => "houseSubmit", :src => "#{asset_path 'mockup/find_restaurants_button.png'}", :type => "image", :value => "Submit"}/
+    %li.hotelForm.container
+      %form{:style => "display:none;"}
+        %div
+          %label{:for => "hotelName"} Hotel Name:
+          %input.hotelName.text{:name => "hotelName", :type => "text", :value => "hotel name"}/
+        %div
+          %label{:for => "hotelNumber"} Room Number:
+          %input.hotelNumber.text{:name => "hotelNumber", :type => "text", :value => "hotel number"}/
+        %div
+          %label{:for => "streetAddress"} Street Address:
+          %input.streetAddress.text{:name => "streetAddress", :type => "text", :value => "address"}/
+        %div
+          %label{:for => "city"} City:
+          %input.city.text{:name => "city", :type => "text", :value => "city"}/
+        %input{:name => "houseSubmit", :src => "#{asset_path 'mockup/find_restaurants_button.png'}", :type => "image", :value => "Submit"}/
+    %li.otherForm.container
+      %form{:style => "display:none;"}
+        %div
+          %label{:for => "streetAddress"} Street Address:
+          %input.streetAddress.text{:name => "streetAddress", :type => "text", :value => "address"}/
+        %div
+          %label{:for => "unitNumber"} Unit Number:
+          %input.unitNumber.text{:name => "unitNumber", :type => "text", :value => "unit number"}/
+        %div
+          %label{:for => "zip"} Zip Code:
+          %input.zip.text{:name => "zip", :type => "text", :value => "zip"}/
+        %input{:name => "houseSubmit", :src => "#{asset_path 'mockup/find_restaurants_button.png'}", :type => "image", :value => "Submit"}/
+    .clear
