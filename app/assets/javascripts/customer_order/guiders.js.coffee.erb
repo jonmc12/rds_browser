@@ -113,18 +113,28 @@ window.Guiders =
       overlay: true
       title: "Anonymous User States"
       width: 600
-    $('.topLeftSlideOut').tabSlideOut
-      tabHandle: '.guiderHandle'                                  # class of the element that will be your tab
+    $('.bottomSlideOut').tabSlideOut
+      tabHandle: '.guiderHandle'                                 # class of the element that will be your tab
       pathToTabImage: '<%= asset_path 'mockup/guiders.png' %>'   #path to the image for the tab *required*
-      imageHeight: '42px'                                         #height of tab image *required*
-      imageWidth: '143px'                                        #width of tab image *required*    
+      imageHeight: '42px'                                        #height of tab image *required*
+      imageWidth: '143px'                                        #width of tab image *required*
       tabLocation: 'bottom'                                      #side of screen where tab lives, top, right, bottom, or left
       speed: 300                                                 #speed of animation
       action: 'click'                                            #options: 'click' or 'hover', action to trigger animation
       topPos: '40px'                                             #position from the top
-      leftPos: '168px'
-      fixedPosition: false                                        #options: true makes it stick(fixed position) on scroll
-    $('.bottomLeftSlideOut').tabSlideOut
+      leftPos: '238px'
+      fixedPosition: false                                       #options: true makes it stick(fixed position) on scroll
+    $('.topLeftSlideOut').tabSlideOut
+      tabHandle: '.viewStatesHandleLeft'
+      pathToTabImage: '<%= asset_path 'mockup/view_states.png' %>'
+      imageHeight: '143px'
+      imageWidth: '42px'
+      tabLocation: 'left'
+      speed: 300
+      action: 'click'
+      topPos: '60px'
+      fixedPosition: false
+    $('.topRightSlideOut').tabSlideOut
       tabHandle: '.viewStatesHandle'
       pathToTabImage: '<%= asset_path 'mockup/view_states.png' %>'
       imageHeight: '143px'

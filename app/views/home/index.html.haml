@@ -2,7 +2,7 @@
 - content_for :head do
   \
 / Guiders Shelf
-.topLeftSlideOut
+.bottomSlideOut.shelf
   %a.guiderHandle{:route => "#"} Guiders
   %ul
     %span Guiders
@@ -17,8 +17,17 @@
     %span Checkout and Confirm:
     %li{:route => "javascript:guider.show('header_first')"} by Credit Card[todo]
     %li{:route => "javascript:guider.show('header_first')"} by Cash[todo]
+/ Guiders Shelf
+.topLeftSlideOut
+  %a.viewStatesHandleLeft{:route => "#"} Links:
+  %ul
+    %span Links
+    %li{:route => "javascript:guider.show('header_first')"} Header
+    %span Search Restaurants:
+    %li{:route => "javascript:guider.show('addressForm_first')"} by Address
+    %li{:route => "javascript:guider.show('header_first')"} by Franchise[todo]
 / Test Shelf
-#testShelf.bottomLeftSlideOut
+.topRightSlideOut
   %a.viewStatesHandle{:href => "#"} View States:
   %ul
     %span Header Base

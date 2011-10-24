@@ -1,5 +1,5 @@
 App.Views.TestShelf = Backbone.View.extend
-  el: 'div#testShelf'
+  el: 'div.topRightSlideOut'
   events:
     "click ul > li > div": "processTestLinks"
   
