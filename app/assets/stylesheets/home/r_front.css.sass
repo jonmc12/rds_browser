@@ -119,11 +119,12 @@ section#newProduct
         position: relative
         top: -16px
     &:nth-child(3)
-      width: 32%
+      width: 33%
       list-style: none
       float: left
       padding: 17px 0 17px 4px
-      > div.newRestaurants
+      > ul.newRestaurants
+        list-style: none
         > div.tag
           background: image-url('mockup/tag_takeaways_header.png') no-repeat 0 6px
           position: relative
@@ -133,3 +134,23 @@ section#newProduct
           font-size: 20px
           font-family: arial
           font-weight: bold
+        > li
+          float: right
+          > ul
+            list-style: none
+            width: 140px
+            padding: 10px 0 0 0
+            > li
+              padding: 0 0 3px 0
+              font-family: arial
+              font-size: 13px
+
+              >a
+                color: #bb8636
+                text-decoration: underline
+                margin: 0
+              > .inCity
+                padding: 0
+                line-height: 12px
+        
+          
