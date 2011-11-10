@@ -58,7 +58,6 @@ section#company
       width: 45%
       list-style: none
       float: left
-      border-right: 1px solid #aeaeae
     &:nth-child(2)
       width: 54%
       list-style: none
@@ -74,32 +73,63 @@ section#company
       padding: 10px 10px 0 10px
 
 section#newProduct
-  height: 200px
+  height: 258px
   background: #FFF image-url('mockup/checker_bg.png')
+  -moz-box-shadow: 0px 0px 2px 2px #eae5d3
+  -webkit-box-shadow: 0px 0px 2px 2px #eae5d3
+  box-shadow: 0px 0px 2px 2px #eae5d3
   > ul > li
     &:nth-child(1)
-      width: 33%
+      width: 27%
+      height: 258px
       list-style: none
       float: left
-      border-right: 1px solid #aeaeae
       padding: 21px 0
-      > div.searchCity > img
-        position: relative
-        left: -6px
+      background: image-url('mockup/divider.png') no-repeat 240px 0
+      > ul.searchCity
+        list-style: none
+        > div.tag
+          background: image-url('mockup/tag_browse_by_city_header.png') no-repeat 0 6px
+          padding: 12px 20px 22px 28px
+          color: white
+          font-size: 20px
+          font-family: arial
+          position: relative
+          left: -6px
+          font-weight: bold
+        > li
+          padding: 4px 30px
+          font-family: arial
+          color: #bb8636
+          text-decoration: underline
     &:nth-child(2)
-      width: 33%
+      background: image-url('mockup/divider.png') no-repeat 356px 0
+      width: 39%
       list-style: none
       float: left
-      border-right: 1px solid #aeaeae
       margin: 0 auto
       img
-        margin: 6px 20px 0 30px
+        margin: 22px 20px 0 48px
+      button
+        background: image-url('mockup/enter_contest.png') no-repeat
+        width: 200px
+        height: 60px
+        border: 0px
+        margin: 0 0 0 88px
+        position: relative
+        top: -16px
     &:nth-child(3)
       width: 32%
       list-style: none
       float: left
-      border-right: 1px solid #aeaeae
       padding: 17px 0 17px 4px
-      > div.newRestaurants > img
-        position: relative
-        left: 20px
+      > div.newRestaurants
+        > div.tag
+          background: image-url('mockup/tag_takeaways_header.png') no-repeat 0 6px
+          position: relative
+          left: 20px
+          padding: 12px 10px 12px 45px
+          color: white
+          font-size: 20px
+          font-family: arial
+          font-weight: bold

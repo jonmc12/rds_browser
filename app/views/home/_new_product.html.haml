@@ -1,11 +1,20 @@
 %section#newProduct
   %ul
     %li
-      .searchCity.container
-        %img{:alt => "", :src => "#{asset_path 'mockup/browse_by_city_header.png'}"}/
+      %ul.searchCity.container
+        .tag
+          Browse by City
+        %li Austin (30)
+        %li Bloomington (24)
+        %li Boston (28)
+        %li Berkeley (24)
+        %li Stanford (32)
+        
     %li
       .ipadContest.container
         %img{:alt => "", :src => "#{asset_path 'mockup/ipad_contest_button.png'}"}/
+        %button
     %li
       .newRestaurants.container
-        %img{:alt => "", :src => "#{asset_path 'mockup/takeaways_header.png'}"}/
+        .tag
+          Takeaways added today

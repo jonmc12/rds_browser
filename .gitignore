@@ -6,3 +6,4 @@ tmp/
 .DS_store
 public/assets
 public/Users/jonmc12/Desktop/code/rds_browser/spec/javascripts/generated/
+.idea/
