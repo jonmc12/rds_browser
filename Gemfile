@@ -27,6 +27,7 @@ group :development do
   gem "jasmine", 
     :git => 'git://github.com/pivotal/jasmine-gem.git',
     :branch => "1.2.rc1"
+  gem "thin"
 end
 
 gem 'jquery-rails'
